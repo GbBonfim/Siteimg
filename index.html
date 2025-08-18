@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria da Turma</title>
+  <style>
+    /* ===== Estilo geral da página ===== */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    /* ===== Estilo da galeria ===== */
+    .galeria {
+      /* Usando grid para organizar as fotos */
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 15px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    /* ===== Estilo de cada foto ===== */
+    .foto {
+      border: 2px solid #333;
+      border-radius: 8px;
+      overflow: hidden;
+      background: white;
+      transition: transform 0.3s ease;
+      cursor: pointer; /* Cursor de mão ao passar por cima */
+    }
+
+    /* Ajusta a imagem ao espaço */
+    .foto img {
+      width: 100%;
+      display: block;
+    }
+
+    /* Nome do aluno abaixo da foto */
+    .nome {
+      padding: 10px;
+      background: #222;
+      color: white;
+      font-size: 14px;
+    }
+
+    /* ===== Classe aplicada ao clicar (diminui a foto) ===== */
+    .pequena {
+      transform: scale(0.6); /* Reduz o tamanho da foto */
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📷 Galeria da Turma</h1>
+
+  <div class="galeria">
+    <!-- FOTO 1 -->
+    <div class="foto">
+      <!-- Substitua a imagem pelo arquivo real -->
+      <img src="Derek.png" alt="Aluno 1">
+      <!-- Nome do aluno conforme ordem de chamada -->
+      <div class="nome">1 - DEREK EDUARDO DELGADO DE SOUZA</div>
+    </div>
+
+    <!-- FOTO 2 -->
+    <div class="foto">
+      <img src="lip.png" alt="Aluno 2">
+      <div class="nome">2 - FELIPE NADER DE MACEDO NEVES</div>
+    </div>
+
+    <!-- FOTO 3 -->
+    <div class="foto">
+      <img src="gashow.png" alt="Aluno 3">
+      <div class="nome">3 - GUSTAVO MARTINS LYRA</div>
+    </div>
+
+    <!-- FOTO 4 -->
+    <div class="foto">
+      <img src="Teus.png" alt="Aluno 4">
+      <div class="nome">4 - MATEUS HENRIQUE DE CARVALHO</div>
+    </div>
+  </div>
+
+  <script>
+    // Seleciona todas as divs com a classe "foto"
+    const fotos = document.querySelectorAll(".foto");
+
+    // Para cada foto adiciona um evento de clique
+    fotos.forEach(foto => {
+      foto.addEventListener("click", () => {
+        // Alterna a classe "pequena" (reduz ou volta ao tamanho normal)
+        foto.classList.toggle("pequena");
+      });
+    });
+  </script>
+
+</body>
+</html>
