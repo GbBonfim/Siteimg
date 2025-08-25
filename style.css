@@ -1,0 +1,52 @@
+/* ===== Estilo geral da página ===== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+/* ===== Estilo da galeria ===== */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Cria colunas automáticas com largura mínima */
+  gap: 15px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* ===== Estilo de cada foto ===== */
+.foto {
+  border: 2px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* Ajusta a imagem ao espaço do bloco */
+.foto img {
+  width: 100%;
+  display: block;
+}
+
+/* Nome do aluno abaixo da imagem */
+.nome {
+  padding: 10px;
+  background: #222;
+  color: white;
+  font-size: 14px;
+}
+
+/* ===== Classe aplicada ao clicar (aumenta a foto) ===== */
+.aumentada {
+  transform: scale(1.4);  /* Aumenta a foto */
+  z-index: 10;
+  position: relative;
+}

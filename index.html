@@ -4,101 +4,120 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galeria da Turma</title>
-  <style>
-    /* ===== Estilo geral da página ===== */
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      text-align: center;
-      margin: 0;
-      padding: 20px;
-    }
-
-    h1 {
-      margin-bottom: 20px;
-    }
-
-    /* ===== Estilo da galeria ===== */
-    .galeria {
-      /* Usando grid para organizar as fotos */
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 15px;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    /* ===== Estilo de cada foto ===== */
-    .foto {
-      border: 2px solid #333;
-      border-radius: 8px;
-      overflow: hidden;
-      background: white;
-      transition: transform 0.3s ease;
-      cursor: pointer; /* Cursor de mão ao passar por cima */
-    }
-
-    /* Ajusta a imagem ao espaço */
-    .foto img {
-      width: 100%;
-      display: block;
-    }
-
-    /* Nome do aluno abaixo da foto */
-    .nome {
-      padding: 10px;
-      background: #222;
-      color: white;
-      font-size: 14px;
-    }
-
-    /* ===== Classe aplicada ao clicar (diminui a foto) ===== */
-    .pequena {
-      transform: scale(0.6); /* Reduz o tamanho da foto */
-    }
-  </style>
+  <link rel="stylesheet" href="estilo.css"> <!-- Linka o CSS separado -->
 </head>
 <body>
 
   <h1>📷 Galeria da Turma</h1>
 
   <div class="galeria">
-    <!-- FOTO 1 -->
+    <!-- Foto 1 -->
     <div class="foto">
-      <!-- Substitua a imagem pelo arquivo real -->
-      <img src="Derek.png" alt="Aluno 1">
-      <!-- Nome do aluno conforme ordem de chamada -->
-      <div class="nome">1 - DEREK EDUARDO DELGADO DE SOUZA</div>
+      <img src="1.jpeg" alt="Aluno 1">
+      <div class="nome">1 - ADRIEL</div>
     </div>
 
-    <!-- FOTO 2 -->
+    <!-- Foto 2 -->
     <div class="foto">
-      <img src="lip.png" alt="Aluno 2">
-      <div class="nome">2 - FELIPE NADER DE MACEDO NEVES</div>
+      <img src="2.jpeg" alt="Aluno 2">
+      <div class="nome">2 - BRENO </div>
     </div>
 
-    <!-- FOTO 3 -->
+    <!-- Foto 3 -->
     <div class="foto">
-      <img src="gashow.png" alt="Aluno 3">
-      <div class="nome">3 - GUSTAVO MARTINS LYRA</div>
+      <img src="3.jpeg" alt="Aluno 3">
+      <div class="nome">3 - CLEITON </div>
     </div>
 
-    <!-- FOTO 4 -->
+    <!-- Foto 4 -->
     <div class="foto">
-      <img src="Teus.png" alt="Aluno 4">
-      <div class="nome">4 - MATEUS HENRIQUE DE CARVALHO</div>
+      <img src="4.jpeg" alt="Aluno 4">
+      <div class="nome">4 - DEREK</div>
+    </div>
+
+    <!-- Foto 5 a 18 (espaços prontos para adicionar imagens e nomes) -->
+    <div class="foto">
+      <img src="5.jpeg" alt="Aluno 5">
+      <div class="nome">5 - GABRIEL</div>
+    </div>
+
+    <div class="foto">
+      <img src="6.jpeg" alt="Aluno 6">
+      <div class="nome">6 - GUSTAVO</div>
+    </div>
+
+    <div class="foto">
+      <img src="7.jpeg" alt="Aluno 7">
+      <div class="nome">7 - JOÃO CARMO</div>
+    </div>
+
+    <div class="foto">
+      <img src="8.jpeg" alt="Aluno 8">
+      <div class="nome">8 - JOÃO JOSE</div>
+    </div>
+
+    <div class="foto">
+      <img src="9.jpeg" alt="Aluno 9">
+      <div class="nome">9 - LEONARDO</div>
+    </div>
+
+    <div class="foto">
+      <img src="10.jpeg" alt="Aluno 10">
+      <div class="nome">10 - LUCAS</div>
+    </div>
+
+    <div class="foto">
+      <img src="11.jpeg" alt="Aluno 11">
+      <div class="nome">11 - MARIA BORZUK</div>
+    </div>
+
+    <div class="foto">
+      <img src="12.jpeg" alt="Aluno 12">
+      <div class="nome">12 - MATEUS HENRIQUE</div>
+    </div>
+
+    <div class="foto">
+      <img src="13.jpeg" alt="Aluno 13">
+      <div class="nome">13 - MATHEUS LOPES</div>
+    </div>
+
+    <div class="foto">
+      <img src="14.jpeg" alt="Aluno 14">
+      <div class="nome">14 - RENAN</div>
+    </div>
+
+    <div class="foto">
+      <img src="15.jpeg" alt="Aluno 15">
+      <div class="nome">15 - SABRINA</div>
+    </div>
+
+    <div class="foto">
+      <img src="16.jpeg" alt="Aluno 16">
+      <div class="nome">16 - SAMHANTA</div>
+    </div>
+
+    <div class="foto">
+      <img src="17.jpeg" alt="Aluno 17">
+      <div class="nome">17 - VITOR GABRIEL</div>
+    </div>
+
+    <div class="foto">
+      <img src="18.jpeg" alt="Aluno 18">
+      <div class="nome">18 - VITOR QUEIROZ</div>
     </div>
   </div>
 
   <script>
-    // Seleciona todas as divs com a classe "foto"
+    // Seleciona todas as fotos
     const fotos = document.querySelectorAll(".foto");
 
-    // Para cada foto adiciona um evento de clique
+    // Adiciona evento de clique a cada foto
     fotos.forEach(foto => {
       foto.addEventListener("click", () => {
-        // Alterna a classe "pequena" (reduz ou volta ao tamanho normal)
-        foto.classList.toggle("pequena");
+        // Remove a classe 'aumentada' de todas as fotos
+        fotos.forEach(f => f.classList.remove("aumentada"));
+        // Adiciona a classe 'aumentada' na foto clicada
+        foto.classList.add("aumentada");
       });
     });
   </script>
