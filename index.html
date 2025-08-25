@@ -108,18 +108,20 @@
   </div>
 
   <script>
-    // Seleciona todas as fotos
-    const fotos = document.querySelectorAll(".foto");
+   const fotos = document.querySelectorAll(".foto");
 
-    // Adiciona evento de clique a cada foto
-    fotos.forEach(foto => {
-      foto.addEventListener("click", () => {
-        // Remove a classe 'aumentada' de todas as fotos
-        fotos.forEach(f => f.classList.remove("aumentada"));
-        // Adiciona a classe 'aumentada' na foto clicada
-        foto.classList.add("aumentada");
-      });
-    });
+fotos.forEach(foto => {
+  foto.addEventListener("click", () => {
+    const isAlreadyAumentada = foto.classList.contains("aumentada");
+    // Remove a classe 'aumentada' de todas as fotos
+    fotos.forEach(f => f.classList.remove("aumentada"));
+    // Se a foto clicada não estava aumentada, aumenta ela
+    if (!isAlreadyAumentada) {
+      foto.classList.add("aumentada");
+    }
+    // Se já estava aumentada, ao clicar de novo ela volta ao normal
+  });
+});
   </script>
 
 </body>
